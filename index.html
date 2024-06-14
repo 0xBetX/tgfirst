@@ -87,32 +87,10 @@
           <img id="fish" src="./assets/tapps.png" alt="木鱼">
           <p>敲击次数: <span id="count">0</span></p>
           <p>等级: <span id="level">lv1</span></p>
-      </div>
+        </div>
  
-      <h1>Links</h1>
-      <ul>
-        <li>
-          <a
-            href="javascript:Telegram.WebApp.openTelegramLink('https://t.me/trendingapps');"
-            >Open link within Telegram</a
-          >
-        </li>
-        <li>
-          <a href="javascript:Telegram.WebApp.openLink('https://ton.org/');"
-            >Open link in external browser</a
-          >
-        </li>
-        <li>
-          <a
-            href="javascript:Telegram.WebApp.openLink('https://telegra.ph/api',{try_instant_view:true});"
-            >Open link inside Telegram webview</a
-          >
-        </li>
-      </ul>
-
-      <h1>Buttons</h1>
-      <button onclick="Telegram.WebApp.expand();">Expand Webview</button>
-      <button onclick="toggleMainButton();">Toggle Main Button</button>
+     
+     
     </main>
     <div id="viewport"></div>
     <div id="viewport-params-size"></div>
@@ -203,7 +181,7 @@
       });
 
       function updateLevel() {
-        const level = Math.floor(count / 1000000) + 1;
+        const level = Math.floor(count / 100) + 1;
         levelDisplay.textContent = `lv${level}`;
       }
     </script>
