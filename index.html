@@ -118,7 +118,7 @@
     <div id="viewport-params-size"></div>
     <div id="viewport-params-expand"></div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="script.js"></script>
+    
     <script>
       // Init TWA
       Telegram.WebApp.ready();
@@ -190,6 +190,22 @@
           "--bg-color:" + Telegram.WebApp.backgroundColor
         );
       });
+
+      let count = 0;
+      const countDisplay = document.getElementById("count");
+      const levelDisplay = document.getElementById("level");
+      const fish = document.getElementById("fish");
+
+      fish.addEventListener("click", () => {
+        count++;
+        countDisplay.textContent = count;
+        updateLevel();
+      });
+
+      function updateLevel() {
+        const level = Math.floor(count / 1000000) + 1;
+        levelDisplay.textContent = `lv${level}`;
+      }
     </script>
 
     <!-- Eruda is console for mobile browsers -->
